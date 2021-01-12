@@ -1,6 +1,6 @@
 {
-  "name": "Sakura",
-  "description": "starter project nextjs, chakra ui, typescript",
+  "name": "Broperti",
+  "description": "landing page",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
