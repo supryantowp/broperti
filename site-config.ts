@@ -1,6 +1,6 @@
 export const siteConfig = {
-  title: 'Sakura',
-  description: 'starter project nextjs, chakra ui, typescript',
+  title: 'Broperti',
+  description: 'Discover Your Own Future Empire Easy Coszy',
 }
 
 export default siteConfig

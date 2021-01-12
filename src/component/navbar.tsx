@@ -1,9 +1,4 @@
-import { Flex, HStack, Link, Text } from '@chakra-ui/react'
-import NextLink from 'next/link'
-
-import routes from '@/routes'
-
-import ToggleColorMode from './toggle-color-mode'
+import { Button, Flex, HStack, Image, Link } from '@chakra-ui/react'
 
 const Navbar = () => {
   return (
@@ -12,29 +7,34 @@ const Navbar = () => {
       pos='sticky'
       top={0}
       flexDir='row'
-      px={{ base: 10, md: 20 }}
-      py={8}
+      py={4}
       align='center'
       justify='space-between'
+      bg='#0F1837'
+      px={{ base: 10, md: 20 }}
+      zIndex={4}
     >
-      <HStack spacing={6} justify='center'>
-        <Text fontSize='xl' fontWeight='bold'>
-          Sakura
-        </Text>
-        {routes.map(([text, href]) => (
-          <div key={href}>
-            <NextLink href={href} key={href}>
-              <Link href={href}>{text}</Link>
-            </NextLink>
-          </div>
-        ))}
+      <Image w={50} h={50} htmlWidth={50} htmlHeight={50} src='/logo.png' />
+      <HStack d={{ base: 'none', md: 'block' }} spacing={6} justify='center'>
+        <Link color='teal.300' href='#'>
+          Home
+        </Link>
+        <Link color='gray.400' href='#'>
+          Featured
+        </Link>
+        <Link color='gray.400' href='#'>
+          Stories
+        </Link>
+        <Link color='gray.400' href='#'>
+          Partner
+        </Link>
+        <Link color='gray.400' href='#'>
+          About
+        </Link>
       </HStack>
-      <HStack spacing={6}>
-        <NextLink href='/login'>
-          <Link>Login</Link>
-        </NextLink>
-        <ToggleColorMode />
-      </HStack>
+      <Button fontWeight='normal' colorScheme='teal'>
+        My Account
+      </Button>
     </Flex>
   )
 }

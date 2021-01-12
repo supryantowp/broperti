@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react'
 
-const Container = ({ children }) => {
+const Container = ({ children, ...rest }) => {
   return (
-    <Box py={4} px={{ base: 10, md: 20 }}>
+    <Box {...rest} py={6} px={{ base: 10, md: 20 }}>
       {children}
     </Box>
   )
