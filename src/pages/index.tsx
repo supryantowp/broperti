@@ -25,7 +25,7 @@ const Index = () => (
   <>
     <NextSeo title='Broperti Landing Page' titleTemplate='%s' />
     <Box py={{ base: 8, lg: 0 }} px={{ base: 10, md: 20 }} bg='#0F1837'>
-      <Image pos='absolute' top={10} right={2} src='union.png' zIndex={1} />
+      <Image pos='absolute' top={10} right={2} src='/Union.png' zIndex={1} />
       <Flex align='center' justify='space-between'>
         <Box maxW='350px' zIndex={3}>
           <Content
