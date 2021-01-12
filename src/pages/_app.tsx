@@ -1,17 +1,16 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
-import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
 
 import Navbar from '@/component/navbar'
 import theme from '@/theme'
+import SEO from '~/next-seo.config'
 import siteConfig from '~/site-config'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <Head>
-        <title>{siteConfig.title}</title>
-      </Head>
+      <DefaultSeo {...SEO} canonical={siteConfig.url + (router.asPath || '')} />
       <Navbar />
       <Component {...pageProps} />
     </ChakraProvider>

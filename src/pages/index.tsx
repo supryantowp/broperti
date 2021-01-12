@@ -4,13 +4,13 @@ import {
   Flex,
   FormControl,
   FormLabel,
-  Heading,
   Image,
   Input,
   Link,
   SimpleGrid,
   Text,
 } from '@chakra-ui/react'
+import { NextSeo } from 'next-seo'
 
 import Container from '@/component/container'
 import Content from '@/component/content'
@@ -23,6 +23,7 @@ import siteConfig from '~/site-config'
 
 const Index = () => (
   <>
+    <NextSeo title='Broperti Landing Page' titleTemplate='%s' />
     <Box py={{ base: 8, lg: 0 }} px={{ base: 10, md: 20 }} bg='#0F1837'>
       <Image pos='absolute' top={10} right={2} src='union.png' zIndex={1} />
       <Flex align='center' justify='space-between'>
